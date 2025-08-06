@@ -1,6 +1,6 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-if (!process.env.DB_URL) {
+if (!process.env.NEXT_PUBLIC_DB_URL) {
   throw new Error("Mongo URL not found!");
 }
 

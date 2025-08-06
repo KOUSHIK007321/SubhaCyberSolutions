@@ -17,7 +17,6 @@ import { logout } from "@/actions/auth";
 const customFont = localFont({ src: "../fonts/JungleFlame-nAAv4.otf" });
 
 export default function NavbarClient({ isLoggedIn }) {
-  console.log(isLoggedIn);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
