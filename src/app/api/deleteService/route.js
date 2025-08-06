@@ -1,5 +1,5 @@
 // /pages/api/deleteService.js
-import { getCollection } from "@/lib/db";
+import { getCollection } from "@/app/lib/db";
 
 export async function DELETE(request) {
   try {
@@ -35,13 +35,10 @@ export async function DELETE(request) {
         }
       );
     } else {
-      return new Response(
-        JSON.stringify({ message: "Service not found" }),
-        {
-          status: 404,
-          headers: { "Content-Type": "application/json" },
-        }
-      );
+      return new Response(JSON.stringify({ message: "Service not found" }), {
+        status: 404,
+        headers: { "Content-Type": "application/json" },
+      });
     }
   } catch (error) {
     console.error("Error deleting service:", error);

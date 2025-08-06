@@ -1,7 +1,7 @@
 "use server";
 
-import getAuthUser from "@/lib/getAuthUser";
-import NavbarClient from "@/components/navbarClient";
+import getAuthUser from "@/app/lib/getAuthUser";
+import NavbarClient from "@/app/components/navbarClient";
 
 export default async function NavbarServer() {
   const isLoggedIn = await getAuthUser();

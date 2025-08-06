@@ -1,11 +1,11 @@
-import { getCollection } from "@/lib/db";
+import { getCollection } from "@/app/lib/db";
 
 // GET method - Fetch all services
 export async function GET() {
   try {
     const userCollection = await getCollection("Services");
     const services = await userCollection.find().toArray();
-    return new Response(JSON.stringify({services}), {
+    return new Response(JSON.stringify({ services }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });

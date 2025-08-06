@@ -1,5 +1,5 @@
 // /pages/api/createService.js
-import { getCollection } from "@/lib/db";
+import { getCollection } from "@/app/lib/db";
 
 // POST method - Add a new service
 export async function POST(request) {
@@ -9,7 +9,9 @@ export async function POST(request) {
 
     if (!SrvTitle || !SrvDescription) {
       return new Response(
-        JSON.stringify({ message: "Service Title and Description are required" }),
+        JSON.stringify({
+          message: "Service Title and Description are required",
+        }),
         { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
@@ -27,7 +29,9 @@ export async function POST(request) {
     console.log("Inserted service:", result);
 
     // Fetch the inserted service to return the full document
-    const insertedService = await userCollection.findOne({ _id: result.insertedId });
+    const insertedService = await userCollection.findOne({
+      _id: result.insertedId,
+    });
 
     return new Response(
       JSON.stringify({

@@ -12,7 +12,7 @@ import { LuMailCheck } from "react-icons/lu";
 import { FaCircleInfo } from "react-icons/fa6";
 import { FiMenu } from "react-icons/fi";
 import { RiCloseLargeFill } from "react-icons/ri";
-import { logout } from "@/actions/auth";
+import { logout } from "@/app/actions/auth";
 
 const customFont = localFont({ src: "../fonts/JungleFlame-nAAv4.otf" });
 
@@ -83,7 +83,7 @@ export default function NavbarClient({ isLoggedIn }) {
             setIsProfileOpen(!isProfileOpen);
             if (setIsMobileMenuOpen) setIsMobileMenuOpen(false);
           }}
-          className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center hover:bg-blue-400 hover:scale-105 transition-transform duration-200"
+          className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center hover:bg-blue-400 hover:scale-105 transition-transform duration-200 cursor-pointer"
         >
           KD
         </button>
@@ -130,7 +130,7 @@ export default function NavbarClient({ isLoggedIn }) {
               logout();
               setIsProfileOpen(false);
             }}
-            className="flex items-center justify-center my-3 px-6 py-1.5 text-sm bg-red-500 text-white hover:bg-red-600 font-medium transition-colors duration-200 rounded-md w-24 mx-auto block text-center"
+            className="flex items-center justify-center my-3 px-6 py-1.5 text-sm bg-red-500 text-white hover:bg-red-600 font-medium transition-colors duration-200 rounded-md w-24 mx-auto block text-center cursor-pointer"
           >
             Logout
           </button>

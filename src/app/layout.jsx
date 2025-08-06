@@ -1,6 +1,6 @@
 import "./globals.css";
-import NavbarServer from "@/components/navbarServer";
-import Footer from "@/components/Footer";
+import NavbarServer from "@/app/components/navbarServer";
+import Footer from "@/app/components/Footer";
 
 export const metadata = {
   title: "Subha Cyber Solutions",

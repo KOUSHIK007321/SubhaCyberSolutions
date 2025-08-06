@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import localFont from "next/font/local";
 import { motion, AnimatePresence } from "framer-motion";
 import { useActionState } from "react";
-import { login, register } from "@/actions/auth";
+import { login, register } from "@/app/actions/auth";
 import {
   User,
   Lock,

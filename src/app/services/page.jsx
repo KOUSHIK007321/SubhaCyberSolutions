@@ -1,6 +1,6 @@
 // app/page.jsx
 import React from "react";
-import ServiceCard from "@/components/serviceCards";
+import ServiceCard from "@/app/components/serviceCards";
 
 // This will be a Server Component that fetches data
 const fetchServices = async () => {

@@ -1,10 +1,10 @@
 "use server";
 
 import bcrypt from "bcryptjs";
-import { getCollection } from "@/lib/db";
-import { RegisterFormSchema, LoginFormSchema } from "@/lib/rules";
+import { getCollection } from "@/app/lib/db";
+import { RegisterFormSchema, LoginFormSchema } from "@/app/lib/rules";
 import { redirect } from "next/navigation";
-import { createSession } from "@/lib/sessions";
+import { createSession } from "@/app/lib/sessions";
 import { cookies } from "next/headers";
 
 export async function register(state, formData) {
@@ -60,7 +60,7 @@ export async function register(state, formData) {
     password: hashedPassword,
     CreatedOn: new Date(),
     CreatedBy: "UsrOwn",
-    isActive: "true"
+    isActive: "true",
   });
 
   // Create a session
@@ -111,5 +111,4 @@ export async function logout() {
   const cookieStore = await cookies();
   cookieStore.delete("session");
   redirect("/Login-Signup");
-
 }

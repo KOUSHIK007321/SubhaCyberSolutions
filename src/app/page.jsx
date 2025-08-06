@@ -1,6 +1,6 @@
 "use client";
 
-import ServiceCards from "@/components/serviceSlider";
+import ServiceCards from "@/app/components/serviceSlider";
 import Link from "next/link";
 
 export default function Home() {
@@ -34,8 +34,6 @@ export default function Home() {
         </div>
         <ServiceCards />
       </section>
-
-  
 
       {/* Testimonials Section */}
       <section className="pb-16 bg-gray-900">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/app/components/ui/card";
 import { Atom } from "react-loading-indicators";
 import {
   Carousel,
@@ -9,7 +9,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel.jsx";
+} from "@/app/components/ui/carousel.jsx";
 
 export default function ServiceCards() {
   const [services, setServices] = useState([]);

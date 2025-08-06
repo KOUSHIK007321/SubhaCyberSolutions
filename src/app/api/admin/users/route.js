@@ -1,7 +1,7 @@
 // app/api/admin/users/route.js
 import { NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
-import { getCollection } from "@/lib/db.js"; // Adjust the import path as needed
+import { getCollection } from "@/app/lib/db.js"; // Adjust the import path as needed
 import bcrypt from "bcryptjs";
 
 const collectionName = "users";
@@ -33,7 +33,6 @@ export async function POST(request) {
     // Check for action parameter to determine operation
     const action = body.action || "create";
 
-
     // Modify the user operation here
 
     if (action === "updateStatus") {
@@ -59,16 +58,13 @@ export async function POST(request) {
       );
 
       if (result.matchedCount === 0) {
-        return NextResponse.json(
-          { error: "User not found" },
-          { status: 404 }
-        );
+        return NextResponse.json({ error: "User not found" }, { status: 404 });
       }
 
       return NextResponse.json({
         message: "User status updated successfully",
         isActive: isActive,
-        status: 202
+        status: 202,
       });
     }
 
@@ -157,4 +153,3 @@ export async function POST(request) {
     );
   }
 }
-

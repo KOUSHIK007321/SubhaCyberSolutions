@@ -1,5 +1,5 @@
-import { getCollection } from "@/lib/db";
-import { AdminServiceForm } from "@/lib/rules";
+import { getCollection } from "@/app/lib/db";
+import { AdminServiceForm } from "@/app/lib/rules";
 
 export async function addServiceCollection(state, formData) {
   const validatedFields = AdminServiceForm.safeParse({
