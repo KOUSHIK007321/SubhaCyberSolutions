@@ -41,7 +41,7 @@ const Footer = () => {
               <FaFacebook size={30} />
             </a>
             <a
-              href="https://api.whatsapp.com/send/?phone=916291912711&text=Hello,I'm Looking for some services in your website&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=918100151023&text=Hello,I'm Looking for some services in your website&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               style={styles.icon}
