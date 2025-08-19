@@ -8,11 +8,12 @@ import localFont from "next/font/local";
 import { IoHome } from "react-icons/io5";
 import { MdDashboardCustomize } from "react-icons/md";
 import { GrServices } from "react-icons/gr";
-import { LuMailCheck } from "react-icons/lu";
 import { FaCircleInfo } from "react-icons/fa6";
 import { FiMenu } from "react-icons/fi";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { logout } from "@/app/actions/auth";
+import { MdMarkEmailRead } from "react-icons/md";
+
 
 const customFont = localFont({ src: "../fonts/JungleFlame-nAAv4.otf" });
 
@@ -49,7 +50,7 @@ export default function NavbarClient({ isLoggedIn }) {
     {
       name: "Contact Us",
       href: "/contacts",
-      icon: <LuMailCheck className="w-5 h-5" />,
+      icon: <MdMarkEmailRead className="w-5 h-5" />,
       visible: true,
     },
   ];
@@ -130,7 +131,7 @@ export default function NavbarClient({ isLoggedIn }) {
               logout();
               setIsProfileOpen(false);
             }}
-            className="flex items-center justify-center my-3 px-6 py-1.5 text-sm bg-red-500 text-white hover:bg-red-600 font-medium transition-colors duration-200 rounded-md w-24 mx-auto block text-center cursor-pointer"
+            className="flex items-center justify-center my-3 px-6 py-1.5 text-sm bg-red-500 text-white hover:bg-red-600 font-medium transition-colors duration-200 rounded-md w-24 mx-auto text-center cursor-pointer"
           >
             Logout
           </button>
